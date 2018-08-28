@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" http-equiv="X-UA-Compatible">
+    <title>ブロック崩し</title>
+      <style type="text/css">
+        body {
+          background-color: white;/*rgb(7, 21, 88)*/
+        }
+        #root {
+          margin-left:auto;
+          margin-right:auto;
+          width:960px;
+          height: 670px;
+          /*background-color: #202020;*/
+          text-align:left;
+        }
+        #playarea {
+          position:absolute;
+          top: 20px;
+        }
+        #playscreen {
+          position:absolute;
+          top: 80px;
+          left: 8px;
+          width: 640px;
+          height: 480px;
+          border-top-width: 6px;
+          border-right-width: 6px;
+          border-bottom-width: 6px;
+          border-left-width: 6px;
+          border-top-style: groove;
+          border-right-style: groove;
+          border-bottom-style: groove;
+          border-left-style: groove;
+          z-index: 1;
+        }
+        #helpimg {
+          position:absolute;
+          top: 80px;
+          left:680px;
+        }
+        #helptext {
+          position:absolute;
+          top: 80px;
+          left:680px;
+          width: 250px;
+          height: 470px;
+          background-color: #e0e0ff;
+          padding-top: 8px;
+          padding-left: 8px;
+          border-top-width: 6px;
+          border-right-width: 6px;
+          border-bottom-width: 6px;
+          border-left-width: 6px;
+          border-top-style: double;
+          border-right-style: double;
+          border-bottom-style: double;
+          border-left-style: double;
+          font-size:14px;
+          font-family: 'arial black';
+        }
+      </style>
+      <script language="JavaScript" src="block.js"></script>
+  </head>
+  <body>
+    <audio id="audio_stroke"><source src="./sound/stroke.m4a"><source src="./sound/stroke.ogg"></audio>
+    <audio id="audio_loss"><source src="./sound/loss.m4a"><source src="./sound/loss.ogg"></audio>
+    <audio id="audio_wallhit1"><source src="./sound/wallhit.m4a"><source src="./sound/wallhit.ogg"></audio>
+    <audio id="audio_wallhit2"><source src="./sound/wallhit.m4a"><source src="./sound/wallhit.ogg"></audio>
+    <audio id="audio_wallhit3"><source src="./sound/wallhit.m4a"><source src="./sound/wallhit.ogg"></audio>
+    <audio id="audio_wallhit4"><source src="./sound/wallhit.m4a"><source src="./sound/wallhit.ogg"></audio>
+    
+    <div id="root">      
+      <!-- Google Adsense Start -->
+      <script type="text/javascript">
+      <!--
+        google_ad_client = "pub-8981148623682774";
+        /* 728x15, 作成済み 11/02/06 */
+        google_ad_slot = "9062988526";
+        google_ad_width = 728;
+        google_ad_height = 15;
+      //-->
+      </script>
+      <div id = "playarea">
+        <span id="playscreen">
+          <canvas id="gamefield" width=640 height="480"></canvas>
+        </span>
+        <span id="helptext">
+          ボールを当ててブロックを消す<br>
+          全部消すと次のステージに進める<br>
+          ステージは全部で３つ<br>
+          GameOverで同じステージの最初から<br>
+          <br>
+          <b>[マウス操作]</b><br>
+          ・マウスクリックでゲーム開始<br>
+          ・左右移動でパドル操作<br>
+          ・ゲーム中のクリックで中断<br>
+          ・中断中のクリックで再開<br>
+          <br>
+          <b>[Score]</b><br>
+          ・ボールをぶつけると1ポイント獲得<br>
+          ・続けてぶつける程ポイントは加算<br>
+          <br>
+          <b>[Ball]</b><br>
+          ・5回までリトライできる<br>
+          <br>
+          <b>[Difficulty]</b><br>
+          ・ゲーム開始前に難易度が変更できる<br>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
