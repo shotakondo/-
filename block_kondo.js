@@ -112,6 +112,7 @@ var field_difficulty = 3;
 var field_stage = 4;
 var field_sound = 5;
 var blocklife = [1,1,1,1,2,1,1,3,1,1,1];
+//変更箇所１
 var stageblock = [
                    /* Stage 1 */
                    [
@@ -239,6 +240,7 @@ onload = function() {
   blockheight = 20;
   baseposx = 8;
   baseposy = 8;
+  //変更箇所２
   maxstage = 5;
   mousex = -1;
   mousey = -1;
@@ -283,6 +285,7 @@ function initScreen(newscreen)
   ctx.fillStyle = "rgb(0,0,0)";
   ctx.fillRect(0, 0, baseposx+screenwidth, height);
   // 背景表示
+  //変更箇所３
   var grad  = ctx.createLinearGradient(baseposx,baseposy,baseposx,screenheight);
   //grad.addColorStop(0.0,'rgb(0,0,32)');
   //grad.addColorStop(1.0,'rgb(0,0,32)');
@@ -414,6 +417,7 @@ function block(x,y,type) {
 
   this.initimg = function() {
     var basepos;
+    //変更箇所４
     var drawcolor = [[64,64,64],[225,34,34],[123,72,21],[213,161,106],[255,255,255],[0,255,0],[255,192,203],[0,0,0],[255,105,180],[30,144,255],[255,213,0]];
     var r,g,b;
 
@@ -437,6 +441,7 @@ function block(x,y,type) {
       for (var y = 0; y < blockheight-2*2; y++) {
         basepos = (x+y*(blockwidth-2*2))*4;
         color = r;
+        //変更箇所５
         if (color < 0) {
           color = 0;
         }
