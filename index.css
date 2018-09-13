@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(160, 160, 160);
+  }
+  #root {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+    height: auto;
+    background-color: #202020;
+    text-align:left;
+  }
+  #playarea {
+    position:absolute;
+    top: 20px;
+  }
+  #playscreen {
+    position:absolute;
+    top: 80px;
+    left: 8px;
+    width: 640px;
+    height: 480px;
+  }
+  #helpimg {
+    position:absolute;
+    top: 80px;
+    left:680px;
+  }
+  #helptext {
+    position:absolute;
+    top: 80px;
+    left:680px;
+    width: 250px;
+    height: 470px;
+    background-color: #e0e0ff;
+    padding-top: 8px;
+    padding-left: 8px;
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+    border-top-style: double;
+    border-right-style: double;
+    border-bottom-style: double;
+    border-left-style: double;
+    font-size:14px;
+    font-family: 'arial black';
+  }
